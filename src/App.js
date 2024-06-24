@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Button from './Component/button';
+import TextField from './Component/TextField';
+
+import { FaBeer } from 'react-icons/fa';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button
+        title="Click Me"
+        backgroundColor="blue"
+        icon={<FaBeer />}
+        size="large"
+      />
+      <Button
+        title="Submit"
+        backgroundColor="gray"
+        size="small"
+      />
+      <TextField
+        label="Username"
+        maxLength={20}
+        minLength={5}
+        placeholder="Enter your username"
+        size="large"
+      />
+      <TextField
+        label="Password"
+        maxLength={15}
+        minLength={8}
+        placeholder="Enter your password"
+        size="small"
+      />
     </div>
   );
 }
